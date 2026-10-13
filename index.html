@@ -1,0 +1,2911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNest Hardware | Premium PC Components & Accessories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-alt: #f1f5f9;
+            --border-color: #e2e8f0;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --accent-navy: #1e293b;
+            --accent-blue: #2563eb;
+            --accent-blue-hover: #1d4ed8;
+            --accent-light-blue: #eff6ff;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.03);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-full: 9999px;
+            --transition-fast: all 0.2s ease;
+            --transition-normal: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            outline: none;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-padding {
+            padding: 4.5rem 0;
+        }
+
+        .section-header {
+            margin-bottom: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .section-title-wrap h2 {
+            font-size: 1.85rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .section-title-wrap p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 0.25rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: var(--radius-md);
+            transition: var(--transition-fast);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-navy);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0f172a;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-accent {
+            background-color: var(--accent-blue);
+            color: #ffffff;
+        }
+
+        .btn-accent:hover {
+            background-color: var(--accent-blue-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-alt);
+            border-color: #cbd5e1;
+        }
+
+        .btn-sm {
+            padding: 0.45rem 0.9rem;
+            font-size: 0.8rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.725rem;
+            font-weight: 700;
+            border-radius: var(--radius-full);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .badge-sale {
+            background-color: #fee2e2;
+            color: #dc2626;
+        }
+
+        .badge-new {
+            background-color: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        .badge-hot {
+            background-color: #fef3c7;
+            color: #d97706;
+        }
+
+        .top-banner {
+            background-color: var(--accent-navy);
+            color: #94a3b8;
+            font-size: 0.8rem;
+            padding: 0.4rem 0;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        .top-banner span {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        header.sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-fast);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            gap: 1.5rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.03em;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent-navy), var(--accent-blue));
+            color: white;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            font-size: 0.925rem;
+            color: var(--text-secondary);
+            transition: var(--transition-fast);
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-blue);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent-blue);
+            border-radius: 2px;
+        }
+
+        .header-search {
+            flex: 1;
+            max-width: 360px;
+            position: relative;
+        }
+
+        .header-search input {
+            width: 100%;
+            padding: 0.6rem 1rem 0.6rem 2.4rem;
+            background-color: var(--bg-alt);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            transition: var(--transition-fast);
+        }
+
+        .header-search input:focus {
+            background-color: var(--bg-card);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .header-search i {
+            position: absolute;
+            left: 0.9rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .icon-btn {
+            position: relative;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            padding: 0.5rem;
+            border-radius: var(--radius-full);
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-btn:hover {
+            color: var(--accent-blue);
+            background-color: var(--bg-alt);
+        }
+
+        .icon-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: var(--accent-blue);
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 700;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid white;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.3rem;
+            color: var(--text-primary);
+        }
+
+        /* Mobile Nav Drawer */
+        .mobile-menu-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-normal);
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: var(--bg-card);
+            z-index: 2001;
+            padding: 2rem 1.5rem;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .mobile-nav-link {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .hero-section {
+            background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-main) 100%);
+            padding: 4rem 0 5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.25rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .hero-content h1 span {
+            color: var(--accent-blue);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 520px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .hero-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .hero-feature-item i {
+            font-size: 1.25rem;
+            color: var(--accent-blue);
+            background: var(--accent-light-blue);
+            padding: 0.6rem;
+            border-radius: var(--radius-sm);
+        }
+
+        .hero-feature-text strong {
+            display: block;
+            font-size: 0.875rem;
+            color: var(--text-primary);
+        }
+
+        .hero-feature-text span {
+            font-size: 0.775rem;
+            color: var(--text-muted);
+        }
+
+        .hero-image-wrap {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+        }
+
+        .hero-image-wrap img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition-normal);
+        }
+
+        .hero-image-wrap:hover img {
+            transform: scale(1.02);
+        }
+
+        .hero-floating-badge {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 0.9rem 1.2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(255,255,255,0.4);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .floating-icon {
+            width: 38px;
+            height: 38px;
+            background-color: var(--success-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .category-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 1rem;
+            text-align: center;
+            transition: var(--transition-fast);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .category-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .category-card.active {
+            border-color: var(--accent-blue);
+            background-color: var(--accent-light-blue);
+        }
+
+        .category-icon {
+            width: 52px;
+            height: 52px;
+            background-color: var(--bg-alt);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            color: var(--accent-navy);
+            transition: var(--transition-fast);
+        }
+
+        .category-card:hover .category-icon {
+            background-color: var(--accent-blue);
+            color: white;
+        }
+
+        .category-card h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .category-card span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            overflow: hidden;
+            padding: 0.5rem 0.25rem 1.5rem;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .carousel-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .carousel-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            transition: var(--transition-fast);
+        }
+
+        .carousel-btn:hover {
+            background-color: var(--accent-navy);
+            color: white;
+            border-color: var(--accent-navy);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: var(--transition-fast);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .product-card:hover {
+            border-color: #cbd5e1;
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .product-badge-wrap {
+            position: absolute;
+            top: 0.8rem;
+            left: 0.8rem;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .wishlist-btn-corner {
+            position: absolute;
+            top: 0.8rem;
+            right: 0.8rem;
+            z-index: 2;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.9);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: var(--transition-fast);
+        }
+
+        .wishlist-btn-corner:hover, .wishlist-btn-corner.active {
+            color: #ef4444;
+            background: white;
+        }
+
+        .product-img-box {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            overflow: hidden;
+            border-bottom: 1px solid var(--bg-alt);
+        }
+
+        .product-img-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: var(--transition-normal);
+        }
+
+        .product-card:hover .product-img-box img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .product-category-text {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.3rem;
+        }
+
+        .product-title {
+            font-size: 0.975rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.35;
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 2.7em;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.775rem;
+            color: var(--warning-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .product-rating span {
+            color: var(--text-muted);
+            margin-left: 0.2rem;
+            font-weight: 500;
+        }
+
+        .product-price-row {
+            margin-top: auto;
+            display: flex;
+            align-items: baseline;
+            gap: 0.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .price-current {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .price-original {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+
+        .product-actions {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 0.5rem;
+        }
+
+        .filter-section {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .filter-group label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .filter-control {
+            width: 100%;
+            padding: 0.55rem 0.8rem;
+            background-color: var(--bg-alt);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+            color: var(--text-primary);
+        }
+
+        .filter-control:focus {
+            border-color: var(--accent-blue);
+            background-color: var(--bg-card);
+        }
+
+        .price-range-slider {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .price-range-slider input[type="range"] {
+            flex: 1;
+            accent-color: var(--accent-blue);
+        }
+
+        .pc-builder-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .builder-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .builder-components-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .builder-row {
+            display: grid;
+            grid-template-columns: 180px 1fr auto;
+            gap: 1rem;
+            align-items: center;
+            padding: 1rem;
+            background-color: var(--bg-alt);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .builder-label {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+
+        .builder-label i {
+            color: var(--accent-blue);
+            width: 20px;
+        }
+
+        .builder-select {
+            width: 100%;
+            padding: 0.6rem 0.8rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            background: white;
+            font-size: 0.875rem;
+        }
+
+        .builder-price {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            min-width: 90px;
+            text-align: right;
+        }
+
+        .builder-summary-box {
+            background-color: var(--bg-alt);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            position: sticky;
+            top: 90px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .builder-summary-box h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+
+        .compatibility-status {
+            padding: 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.825rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .status-ok {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+
+        .status-warning {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        .deals-banner {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            border-radius: var(--radius-lg);
+            padding: 3rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .deals-banner-content {
+            max-width: 550px;
+            z-index: 2;
+        }
+
+        .deals-banner-content h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .deals-banner-content p {
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .deals-timer {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .timer-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 0.6rem 0.9rem;
+            border-radius: var(--radius-sm);
+            text-align: center;
+            min-width: 60px;
+        }
+
+        .timer-box .num {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #ffffff;
+            display: block;
+        }
+
+        .timer-box .unit {
+            font-size: 0.65rem;
+            color: #cbd5e1;
+            text-transform: uppercase;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-fast);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            transform: scale(0.95);
+            transition: var(--transition-fast);
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            padding: 1.25rem 1.75rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-card);
+            z-index: 10;
+        }
+
+        .modal-header h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .modal-close {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            padding: 0.25rem;
+            transition: var(--transition-fast);
+        }
+
+        .modal-close:hover {
+            color: var(--text-primary);
+        }
+
+        .modal-body {
+            padding: 1.75rem;
+        }
+
+        /* Cart Drawer Style adjustment */
+        .cart-modal-card {
+            max-width: 540px;
+            margin-left: auto;
+            height: 100vh;
+            max-height: 100vh;
+            border-radius: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-items-container {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 70px 1fr auto;
+            gap: 1rem;
+            align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cart-item img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            background: var(--bg-alt);
+            border-radius: var(--radius-sm);
+            padding: 0.3rem;
+        }
+
+        .cart-item-details h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .cart-item-price {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .cart-qty-control {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            margin-top: 0.4rem;
+            width: fit-content;
+        }
+
+        .cart-qty-btn {
+            padding: 0.2rem 0.5rem;
+            background: var(--bg-alt);
+            font-size: 0.8rem;
+        }
+
+        .cart-qty-val {
+            padding: 0.2rem 0.6rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .cart-footer {
+            padding: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            background-color: var(--bg-alt);
+        }
+
+        .cart-summary-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .cart-summary-total {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            border-top: 1px solid var(--border-color);
+            padding-top: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .coupon-input-group {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .coupon-input-group input {
+            flex: 1;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        /* Product Detail Modal View */
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .product-detail-img-box {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 320px;
+        }
+
+        .product-detail-img-box img {
+            max-width: 100%;
+            max-height: 280px;
+            object-fit: contain;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .specs-table td {
+            padding: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .specs-table td:first-child {
+            font-weight: 600;
+            color: var(--text-secondary);
+            width: 40%;
+        }
+
+        /* Checkout Form Grid */
+        .checkout-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.825rem;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+            color: var(--text-secondary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.65rem 0.85rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .invoice-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-md);
+            color: #0f172a;
+        }
+
+        .invoice-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .invoice-table th {
+            background-color: var(--bg-alt);
+            text-align: left;
+            padding: 0.75rem;
+            font-weight: 700;
+        }
+
+        .invoice-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .toast-container {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 4000;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .toast {
+            background-color: var(--accent-navy);
+            color: white;
+            padding: 0.85rem 1.25rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.875rem;
+            animation: slideIn 0.3s ease forwards;
+            max-width: 340px;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        .contact-info-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-info-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .contact-info-item i {
+            font-size: 1.25rem;
+            color: var(--accent-blue);
+            background: var(--accent-light-blue);
+            padding: 0.8rem;
+            border-radius: var(--radius-sm);
+        }
+
+        footer {
+            background-color: var(--accent-navy);
+            color: #94a3b8;
+            padding-top: 4rem;
+            border-top: 1px solid #334155;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 2.5rem;
+            padding-bottom: 3.5rem;
+            border-bottom: 1px solid #334155;
+        }
+
+        .footer-brand p {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            max-width: 320px;
+            color: #94a3b8;
+        }
+
+        .footer-column h4 {
+            color: #ffffff;
+            font-size: 1rem;
+            margin-bottom: 1.25rem;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            font-size: 0.875rem;
+            transition: var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .newsletter-form input {
+            padding: 0.6rem 0.8rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid #334155;
+            background: #0f172a;
+            color: white;
+            font-size: 0.85rem;
+            flex: 1;
+        }
+
+        .footer-bottom {
+            padding: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.825rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-content p { margin-left: auto; margin-right: auto; }
+            .hero-actions { justify-content: center; }
+            .hero-features { justify-content: center; }
+            .builder-grid { grid-template-columns: 1fr; }
+            .checkout-grid { grid-template-columns: 1fr; }
+            .product-detail-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu, .header-search { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 2.25rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .builder-row { grid-template-columns: 1fr; text-align: left; }
+            .builder-price { text-align: left; }
+            .deals-banner { flex-direction: column; text-align: center; gap: 1.5rem; }
+            .deals-timer { justify-content: center; }
+        }
+
+        /* Print Media Query */
+        @media print {
+            body * { visibility: hidden; }
+            #invoiceModal, #invoiceModal * { visibility: visible; }
+            #invoiceModal { position: absolute; left: 0; top: 0; width: 100%; height: auto; background: white; }
+            .no-print { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-banner">
+        <div class="container">
+            ⚡ Express Delivery Across India | Authentic Warranty Assured | <span>Use Code TECH10 for 10% OFF</span>
+        </div>
+    </div>
+
+    <header class="sticky-header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-microchip"></i></div>
+                <span>TechNest</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#deals" class="nav-link">Deals</a>
+                <a href="#pc-builder" class="nav-link">PC Builder</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="globalSearchInput" placeholder="Search CPU, GPU, RAM, SSD...">
+            </div>
+
+            <div class="header-actions">
+                <button class="icon-btn" id="openWishlistBtn" title="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="icon-badge" id="wishlistCount">0</span>
+                </button>
+                <button class="icon-btn" id="openCartBtn" title="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="icon-badge" id="cartCount">0</span>
+                </button>
+                <button class="mobile-toggle" id="mobileMenuOpen">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-microchip"></i></div>
+                <span>TechNest</span>
+            </div>
+            <button class="modal-close" id="mobileMenuClose"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#products" class="mobile-nav-link">Products</a>
+            <a href="#categories" class="mobile-nav-link">Categories</a>
+            <a href="#deals" class="mobile-nav-link">Deals</a>
+            <a href="#pc-builder" class="mobile-nav-link">PC Builder</a>
+            <a href="#about" class="mobile-nav-link">About Us</a>
+            <a href="#contact" class="mobile-nav-link">Contact Us</a>
+        </div>
+    </div>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <span class="badge badge-new" style="margin-bottom: 1rem;">Next-Gen Hardware Ready</span>
+                        <h1>Power Your Setup with the <span>Right Hardware</span></h1>
+                        <p>Discover flagship processors, high-performance graphics cards, ultra-fast SSDs, and premium PC components crafted for gamers, creators, and professionals.</p>
+                        <div class="hero-actions">
+                            <a href="#products" class="btn btn-primary"><i class="fa-solid fa-bag-shopping"></i> Shop Hardware</a>
+                            <a href="#categories" class="btn btn-secondary">Explore Categories</a>
+                        </div>
+                        <div class="hero-features">
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <div class="hero-feature-text">
+                                    <strong>100% Genuine</strong>
+                                    <span>Brand Warranty</span>
+                                </div>
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-truck-fast"></i>
+                                <div class="hero-feature-text">
+                                    <strong>Fast Shipping</strong>
+                                    <span>Pan India Delivery</span>
+                                </div>
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-headset"></i>
+                                <div class="hero-feature-text">
+                                    <strong>Expert Support</strong>
+                                    <span>PC Building Advice</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1000&q=80" alt="High Performance Computer Hardware Setup" onerror="this.src='https://placehold.co/800x600/0f172a/ffffff?text=TechNest+Setup'">
+                        <div class="hero-floating-badge">
+                            <div class="floating-icon"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <strong style="font-size:0.85rem; display:block;">Verified Performance</strong>
+                                <span style="font-size:0.75rem; color:var(--text-secondary);">Tested Rig Components</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="section-padding" style="background-color: var(--bg-card);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <h2>Browse by Category</h2>
+                        <p>Explore specialized PC components and gaming peripherals</p>
+                    </div>
+                </div>
+                <div class="categories-grid" id="categoryGrid">
+                    <!-- Categories dynamically generated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <h2>Featured & Best Sellers</h2>
+                        <p>Top rated components picked by PC builders</p>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" id="carouselPrev"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="carousel-btn" id="carouselNext"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Dynamic Featured Carousel Cards -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="deals" class="container">
+            <div class="deals-banner">
+                <div class="deals-banner-content">
+                    <span class="badge badge-sale" style="margin-bottom: 0.75rem;">Limited Time Deal</span>
+                    <h2>Exclusive PC Builder Bundles</h2>
+                    <p>Upgrade your gaming setup with discounted CPU + Motherboard + RAM combo offers. Save up to ₹12,000 this week!</p>
+                    <div class="deals-timer">
+                        <div class="timer-box"><span class="num" id="tHours">18</span><span class="unit">Hours</span></div>
+                        <div class="timer-box"><span class="num" id="tMins">42</span><span class="unit">Mins</span></div>
+                        <div class="timer-box"><span class="num" id="tSecs">15</span><span class="unit">Secs</span></div>
+                    </div>
+                    <a href="#products" class="btn btn-accent"><i class="fa-solid fa-bolt"></i> Claim Offer Now</a>
+                </div>
+                <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=600&q=80" alt="Special Deals Hardware" style="max-width: 320px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);" onerror="this.style.display='none'">
+            </div>
+        </section>
+
+        <section id="products" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <h2>Explore Hardware Catalog</h2>
+                        <p>Filter through our wide range of authentic PC components</p>
+                    </div>
+                </div>
+
+                <!-- Filters Bar -->
+                <div class="filter-section">
+                    <div class="filter-grid">
+                        <div class="filter-group">
+                            <label>Category Filter</label>
+                            <select class="filter-control" id="categoryFilter">
+                                <option value="All">All Categories</option>
+                                <option value="CPU">Processors (CPU)</option>
+                                <option value="GPU">Graphics Cards (GPU)</option>
+                                <option value="Motherboard">Motherboards</option>
+                                <option value="RAM">RAM & Memory</option>
+                                <option value="Storage">SSD & Hard Drives</option>
+                                <option value="PSU">Power Supply Units</option>
+                                <option value="Cabinet">Computer Cabinets</option>
+                                <option value="Cooling">Cooling Systems</option>
+                                <option value="Monitors">Monitors</option>
+                                <option value="Peripherals">Keyboards & Mice</option>
+                                <option value="Networking">Networking Accessories</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Brand Filter</label>
+                            <select class="filter-control" id="brandFilter">
+                                <option value="All">All Brands</option>
+                                <option value="AMD">AMD</option>
+                                <option value="Intel">Intel</option>
+                                <option value="NVIDIA">NVIDIA</option>
+                                <option value="ASUS">ASUS</option>
+                                <option value="MSI">MSI</option>
+                                <option value="Corsair">Corsair</option>
+                                <option value="Samsung">Samsung</option>
+                                <option value="Logitech">Logitech</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Max Price: <span id="priceValueText">₹1,50,000</span></label>
+                            <div class="price-range-slider">
+                                <input type="range" id="priceRange" min="5000" max="150000" step="2000" value="150000">
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Sort By</label>
+                            <select class="filter-control" id="sortFilter">
+                                <option value="popular">Popularity</option>
+                                <option value="low-high">Price: Low to High</option>
+                                <option value="high-low">Price: High to Low</option>
+                                <option value="rating">Customer Rating</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="productsGrid">
+                    <!-- Dynamically Rendered Products -->
+                </div>
+                <div id="noProductsMessage" style="display: none; text-align: center; padding: 4rem; color: var(--text-muted);">
+                    <i class="fa-solid fa-box-open" style="font-size: 3rem; margin-bottom: 1rem; display: block;"></i>
+                    <h3>No products found matching your filters</h3>
+                    <p style="margin-top:0.5rem;">Try resetting your filters or search keywords.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pc-builder" class="section-padding" style="background-color: var(--bg-card);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <h2>Custom PC Builder Tool</h2>
+                        <p>Select compatible components to build your dream custom desktop setup</p>
+                    </div>
+                </div>
+
+                <div class="pc-builder-card">
+                    <div class="builder-grid">
+                        <div class="builder-components-list" id="builderRowsContainer">
+                            <!-- Builder rows injected by JS -->
+                        </div>
+
+                        <div class="builder-summary-box">
+                            <h3>Build Summary</h3>
+                            <div class="compatibility-status status-ok" id="compatibilityBadge">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>All selected parts are compatible</span>
+                            </div>
+                            <div style="font-size: 0.85rem; color: var(--text-secondary);">
+                                Est. Power Draw: <strong id="estWattage">380W</strong>
+                            </div>
+                            <div style="border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                                <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Estimated Total:</span>
+                                <span id="builderTotalPrice" style="font-size: 1.8rem; font-weight: 800; color: var(--accent-navy);">₹0</span>
+                            </div>
+                            <button class="btn btn-primary" id="addBuildToCartBtn"><i class="fa-solid fa-cart-plus"></i> Add Complete Build to Cart</button>
+                            <button class="btn btn-secondary btn-sm" id="resetBuilderBtn"><i class="fa-solid fa-rotate-left"></i> Reset Build</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="contact-grid">
+                    <div>
+                        <span class="badge badge-new" style="margin-bottom: 1rem;">About TechNest</span>
+                        <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem;">Your Trusted PC Component Destination</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">TechNest Hardware was founded with a single mission: to empower technology enthusiasts, hardcore gamers, and creative professionals with authentic high-performance computer hardware.</p>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">We stock only genuine products backed by official manufacturer warranties, verified technical compatibility assistance, and express secure shipping across India.</p>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
+                            <div style="background: var(--bg-card); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                                <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-blue);">100k+</h4>
+                                <span style="font-size: 0.8rem; color: var(--text-muted);">Happy Builders</span>
+                            </div>
+                            <div style="background: var(--bg-card); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                                <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-blue);">100%</h4>
+                                <span style="font-size: 0.8rem; color: var(--text-muted);">Original Parts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="contact" class="contact-info-box">
+                        <h3 style="font-size: 1.3rem; font-weight: 700;">Get in Touch</h3>
+                        <form id="contactForm" style="display: flex; flex-direction: column; gap: 0.85rem;">
+                            <div>
+                                <label style="font-size:0.8rem; font-weight:600;">Full Name</label>
+                                <input type="text" class="form-control" required placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label style="font-size:0.8rem; font-weight:600;">Email Address</label>
+                                <input type="email" class="form-control" required placeholder="john@example.com">
+                            </div>
+                            <div>
+                                <label style="font-size:0.8rem; font-weight:600;">Message</label>
+                                <textarea class="form-control" rows="3" required placeholder="How can we help your setup?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo" style="color:white;">
+                        <div class="logo-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <span>TechNest</span>
+                    </div>
+                    <p>Premier destination for flagship computer hardware, custom gaming PCs, workstation components, and accessories.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" id="newsletterEmail">
+                        <button class="btn btn-accent btn-sm" id="newsletterBtn">Subscribe</button>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#products">All Products</a>
+                        <a href="#pc-builder">PC Builder</a>
+                        <a href="#deals">Deals & Offers</a>
+                        <a href="#about">About Us</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <div class="footer-links">
+                        <a href="#products">Processors</a>
+                        <a href="#products">Graphics Cards</a>
+                        <a href="#products">Motherboards</a>
+                        <a href="#products">DDR5 RAM</a>
+                        <a href="#products">M.2 NVMe SSDs</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Customer Care</h4>
+                    <div class="footer-links">
+                        <a href="#contact">Contact Support</a>
+                        <a href="#">Shipping Policy</a>
+                        <a href="#">Warranty & Returns</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 TechNest Hardware Inc. All Rights Reserved.</span>
+                <div style="display: flex; gap: 1rem; font-size: 1.1rem;">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Cart Drawer Modal -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-card cart-modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-bag-shopping"></i> Shopping Cart</h3>
+                <button class="modal-close" id="cartCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body cart-items-container" id="cartItemsList">
+                <!-- Cart Items injected via JS -->
+            </div>
+            <div class="cart-footer">
+                <div class="coupon-input-group">
+                    <input type="text" id="couponInput" placeholder="Enter Coupon (e.g. TECH10)">
+                    <button class="btn btn-secondary btn-sm" id="applyCouponBtn">Apply</button>
+                </div>
+                <div class="cart-summary-row"><span>Subtotal:</span><span id="cartSubtotal">₹0</span></div>
+                <div class="cart-summary-row"><span>Discount:</span><span id="cartDiscount" style="color:var(--success-color);">-₹0</span></div>
+                <div class="cart-summary-row"><span>Est. Shipping:</span><span id="cartShipping">₹0</span></div>
+                <div class="cart-summary-row cart-summary-total"><span>Total Payable:</span><span id="cartTotal">₹0</span></div>
+                <button class="btn btn-accent" id="checkoutTriggerBtn" style="width:100%; margin-top:1rem;"><i class="fa-solid fa-credit-card"></i> Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div class="modal-overlay" id="productDetailModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="modalProductTitle">Product Specifications</h3>
+                <button class="modal-close" id="productDetailCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="product-detail-grid">
+                    <div class="product-detail-img-box">
+                        <img id="modalProductImg" src="" alt="Product Details">
+                    </div>
+                    <div>
+                        <span class="badge badge-new" id="modalProductCategory">Category</span>
+                        <h2 id="modalProductName" style="font-size:1.4rem; margin:0.5rem 0 0.25rem;">Product Name</h2>
+                        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;" id="modalProductBrand">Brand</p>
+                        
+                        <div class="product-price-row">
+                            <span class="price-current" id="modalProductPrice" style="font-size:1.6rem;">₹0</span>
+                            <span class="price-original" id="modalProductOldPrice">₹0</span>
+                        </div>
+
+                        <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:1rem;" id="modalProductDesc">Product description text...</p>
+
+                        <div style="display:flex; gap:1rem; align-items:center; margin-bottom:1.5rem;">
+                            <div class="cart-qty-control" style="font-size:1rem;">
+                                <button class="cart-qty-btn" id="modalQtyMinus">-</button>
+                                <span class="cart-qty-val" id="modalQtyVal">1</span>
+                                <button class="cart-qty-btn" id="modalQtyPlus">+</button>
+                            </div>
+                            <button class="btn btn-primary" id="modalAddToCartBtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                        </div>
+
+                        <h4 style="font-size:0.95rem; font-weight:700; margin-top:1rem;">Technical Specifications</h4>
+                        <table class="specs-table" id="modalSpecsTable">
+                            <!-- Injected JS specs -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkoutModal">
+        <div class="modal-card" style="max-width: 900px;">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-lock"></i> Express Checkout</h3>
+                <button class="modal-close" id="checkoutCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="checkoutForm">
+                    <div class="checkout-grid">
+                        <div>
+                            <h4 style="font-size:1.1rem; margin-bottom:1rem;">1. Shipping & Contact Details</h4>
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" class="form-control" id="custName" required placeholder="Alex Mercer">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Email Address *</label>
+                                    <input type="email" class="form-control" id="custEmail" required placeholder="alex@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mobile Number *</label>
+                                    <input type="tel" class="form-control" id="custPhone" required placeholder="9876543210">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Delivery Address *</label>
+                                <input type="text" class="form-control" id="custAddress" required placeholder="Street address, apartment, suite">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>City *</label>
+                                    <input type="text" class="form-control" id="custCity" required placeholder="Mumbai">
+                                </div>
+                                <div class="form-group">
+                                    <label>State & Pincode *</label>
+                                    <input type="text" class="form-control" id="custStatePin" required placeholder="Maharashtra - 400001">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 style="font-size:1.1rem; margin-bottom:1rem;">2. Order Summary</h4>
+                            <div style="background:var(--bg-alt); padding:1rem; border-radius:var(--radius-md); border:1px solid var(--border-color);">
+                                <div id="checkoutOrderItemsList" style="max-height:180px; overflow-y:auto; margin-bottom:1rem; font-size:0.85rem;">
+                                    <!-- Items -->
+                                </div>
+                                <div class="cart-summary-row"><span>Items Subtotal:</span><span id="coSubtotal">₹0</span></div>
+                                <div class="cart-summary-row"><span>Discount:</span><span id="coDiscount" style="color:var(--success-color);">-₹0</span></div>
+                                <div class="cart-summary-row"><span>GST (18% included):</span><span id="coGst">₹0</span></div>
+                                <div class="cart-summary-row"><span>Shipping Charges:</span><span id="coShipping">₹0</span></div>
+                                <div class="cart-summary-row cart-summary-total"><span>Grand Total:</span><span id="coTotal">₹0</span></div>
+                                <p style="font-size:0.75rem; color:var(--text-muted); margin-top:0.75rem;">⚡ Demo Checkout Mode: No real financial transaction will occur.</p>
+                                <button type="submit" class="btn btn-accent" style="width:100%; margin-top:1rem;"><i class="fa-solid fa-check-circle"></i> Complete Order & Generate Invoice</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Printable Invoice Modal -->
+    <div class="modal-overlay" id="invoiceModal">
+        <div class="modal-card" style="max-width: 750px;">
+            <div class="modal-header no-print">
+                <h3>Order Confirmed! Invoice Generated</h3>
+                <div style="display:flex; gap:0.5rem;">
+                    <button class="btn btn-primary btn-sm" onclick="window.print()"><i class="fa-solid fa-print"></i> Print Invoice</button>
+                    <button class="modal-close" id="invoiceCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="invoice-card" id="printableInvoiceContent">
+                    <div class="invoice-header">
+                        <div>
+                            <div class="logo">
+                                <div class="logo-icon"><i class="fa-solid fa-microchip"></i></div>
+                                <span>TechNest Hardware</span>
+                            </div>
+                            <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.5rem;">
+                                108 Hardware Plaza, Cyber Tech Zone<br>
+                                Mumbai, Maharashtra 400001<br>
+                                GSTIN: 27AAAAA0000A1Z5
+                            </p>
+                        </div>
+                        <div style="text-align:right;">
+                            <h2 style="font-size:1.4rem; color:var(--accent-navy);">TAX INVOICE</h2>
+                            <p style="font-size:0.85rem; font-weight:600;" id="invNumber">INV-2026-0891</p>
+                            <p style="font-size:0.8rem; color:var(--text-muted);" id="invDate">Date: Oct 13, 2026</p>
+                        </div>
+                    </div>
+
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem; font-size:0.85rem;">
+                        <div>
+                            <strong>Billed To:</strong><br>
+                            <span id="invCustName">Alex Mercer</span><br>
+                            <span id="invCustAddress">123 Tech Street</span><br>
+                            <span id="invCustPhone">+91 9876543210</span>
+                        </div>
+                        <div>
+                            <strong>Payment Method:</strong> Cash on Delivery (Demo)<br>
+                            <strong>Status:</strong> <span style="color:var(--success-color); font-weight:700;">Confirmed</span>
+                        </div>
+                    </div>
+
+                    <table class="invoice-table">
+                        <thead>
+                            <tr>
+                                <th>Item Description</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="invItemsBody">
+                            <!-- Injected JS -->
+                        </tbody>
+                    </table>
+
+                    <div style="display:flex; justify-content:flex-end;">
+                        <div style="width:250px; font-size:0.85rem;">
+                            <div class="cart-summary-row"><span>Subtotal:</span><span id="invSubtotal">₹0</span></div>
+                            <div class="cart-summary-row"><span>Discount:</span><span id="invDiscount">-₹0</span></div>
+                            <div class="cart-summary-row"><span>GST Included (18%):</span><span id="invGst">₹0</span></div>
+                            <div class="cart-summary-row"><span>Shipping:</span><span id="invShipping">₹0</span></div>
+                            <div class="cart-summary-row cart-summary-total"><span>Grand Total:</span><span id="invGrandTotal">₹0</span></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border-color); text-align:center; font-size:0.8rem; color:var(--text-muted);">
+                        Thank you for shopping with TechNest Hardware! For support, email support@technest.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div class="modal-overlay" id="wishlistModal">
+        <div class="modal-card" style="max-width: 600px;">
+            <div class="modal-header">
+                <h3><i class="fa-regular fa-heart"></i> Your Saved Wishlist</h3>
+                <button class="modal-close" id="wishlistCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="wishlistItemsList">
+                <!-- Wishlist items injected JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script>
+        const PRODUCTS_DATA = [
+            {
+                id: 1,
+                name: "AMD Ryzen 7 7800X3D Desktop Processor",
+                category: "CPU",
+                brand: "AMD",
+                price: 36999,
+                originalPrice: 42000,
+                rating: 4.9,
+                reviews: 184,
+                featured: true,
+                badge: "Hot Seller",
+                wattage: 120,
+                socket: "AM5",
+                image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=600&q=80",
+                desc: "The ultimate gaming processor equipped with 3D V-Cache technology, 8 cores, and 16 threads for supreme framerates.",
+                specs: { Cores: "8 Cores / 16 Threads", "Base Clock": "4.2 GHz", "Boost Clock": "Up to 5.0 GHz", Cache: "104MB", Socket: "AM5" }
+            },
+            {
+                id: 2,
+                name: "Intel Core i9-14900K 24-Core Processor",
+                category: "CPU",
+                brand: "Intel",
+                price: 54499,
+                originalPrice: 61000,
+                rating: 4.8,
+                reviews: 142,
+                featured: true,
+                badge: "Flagship",
+                wattage: 253,
+                socket: "LGA1700",
+                image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=600&q=80",
+                desc: "24 cores (8 P-cores + 16 E-cores) reaching up to 6.0 GHz for uncompromised content creation and extreme gaming.",
+                specs: { Cores: "24 Cores (8P+16E)", "Max Turbo": "6.0 GHz", Socket: "LGA1700", PCIe: "Gen 5.0 Support" }
+            },
+            {
+                id: 3,
+                name: "NVIDIA GeForce RTX 4080 Super 16GB GPU",
+                category: "GPU",
+                brand: "NVIDIA",
+                price: 98999,
+                originalPrice: 108000,
+                rating: 4.9,
+                reviews: 98,
+                featured: true,
+                badge: "Best 4K",
+                wattage: 320,
+                image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=600&q=80",
+                desc: "Powered by Ada Lovelace architecture, DLSS 3 frame generation, and 16GB GDDR6X VRAM for ultra-high settings ray tracing.",
+                specs: { VRAM: "16GB GDDR6X", "Memory Bus": "256-bit", "CUDA Cores": "10240", "Power Requirement": "750W PSU" }
+            },
+            {
+                id: 4,
+                name: "ASUS ROG Strix RTX 4070 Ti Super 16GB",
+                category: "GPU",
+                brand: "ASUS",
+                price: 79499,
+                originalPrice: 86000,
+                rating: 4.8,
+                reviews: 76,
+                featured: false,
+                wattage: 285,
+                image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=600&q=80",
+                desc: "Tri-Fan Axial-tech cooling setup, massive heatsink, and subtle ARGB lighting for 1440p and 4K ultra gaming.",
+                specs: { VRAM: "16GB GDDR6X", "Boost Clock": "2670 MHz", Slots: "3.15 Slot Design" }
+            },
+            {
+                id: 5,
+                name: "MSI MAG Z790 Tomahawk WiFi Motherboard",
+                category: "Motherboard",
+                brand: "MSI",
+                price: 28500,
+                originalPrice: 32000,
+                rating: 4.7,
+                reviews: 65,
+                featured: false,
+                socket: "LGA1700",
+                wattage: 50,
+                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+                desc: "Robust 16+1+1 power phase design, PCIe 5.0 slot, DDR5 memory support, Wi-Fi 6E, and multiple M.2 heatshields.",
+                specs: { Socket: "LGA1700", RAM: "DDR5 up to 7200MHz", Storage: "4x M.2 NVMe Slots", Networking: "2.5G LAN + WiFi 6E" }
+            },
+            {
+                id: 6,
+                name: "ASUS TUF Gaming B650-Plus WiFi AM5",
+                category: "Motherboard",
+                brand: "ASUS",
+                price: 19999,
+                originalPrice: 23000,
+                rating: 4.6,
+                reviews: 112,
+                featured: true,
+                socket: "AM5",
+                wattage: 45,
+                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+                desc: "Military-grade durability components, DDR5 support, PCIe 5.0 M.2 slot, and comprehensive fan controls.",
+                specs: { Socket: "AM5", "Form Factor": "ATX", "Memory Slots": "4x DDR5 DIMMs" }
+            },
+            {
+                id: 7,
+                name: "Corsair Vengeance DDR5 32GB (2x16GB) 6000MHz",
+                category: "RAM",
+                brand: "Corsair",
+                price: 11499,
+                originalPrice: 14000,
+                rating: 4.8,
+                reviews: 210,
+                featured: true,
+                wattage: 15,
+                image: "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=600&q=80",
+                desc: "Optimized for Intel and AMD platforms, compact aluminum heatspreader, and dynamic onboard voltage regulation.",
+                specs: { Capacity: "32GB (2x16GB)", Speed: "DDR5 6000MHz", Latency: "CL30", Profile: "EXPO / XMP 3.0" }
+            },
+            {
+                id: 8,
+                name: "G.Skill Trident Z5 RGB 32GB DDR5 6400MHz",
+                category: "RAM",
+                brand: "G.Skill",
+                price: 13999,
+                originalPrice: 16500,
+                rating: 4.9,
+                reviews: 88,
+                featured: false,
+                wattage: 18,
+                image: "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=600&q=80",
+                desc: "Iconic dual-texture aluminum heatspreader with customizable RGB light bar for extreme PC builds.",
+                specs: { Capacity: "32GB (2x16GB)", Speed: "DDR5 6400MHz", Latency: "CL32" }
+            },
+            {
+                id: 9,
+                name: "Samsung 990 PRO 2TB NVMe M.2 SSD",
+                category: "Storage",
+                brand: "Samsung",
+                price: 16800,
+                originalPrice: 21000,
+                rating: 4.9,
+                reviews: 310,
+                featured: true,
+                wattage: 10,
+                image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=600&q=80",
+                desc: "Blazing sequential read speeds up to 7450 MB/s. Perfect for high-end gaming, 3D rendering, and video editing.",
+                specs: { Interface: "PCIe Gen 4.0 x4", "Read Speed": "7450 MB/s", "Write Speed": "6900 MB/s", Form: "M.2 2280" }
+            },
+            {
+                id: 10,
+                name: "Corsair RM850x 850W 80+ Gold Modular PSU",
+                category: "PSU",
+                brand: "Corsair",
+                price: 12499,
+                originalPrice: 14999,
+                rating: 4.9,
+                reviews: 175,
+                featured: false,
+                wattage: 850,
+                image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=600&q=80",
+                desc: "Fully modular cable management, Japanese 105°C capacitors, Zero RPM fan mode for ultra-quiet operation.",
+                specs: { Efficiency: "80 PLUS Gold", Modular: "Fully Modular", Fan: "135mm Magnetic Levitation" }
+            },
+            {
+                id: 11,
+                name: "Lian Li O11 Dynamic EVO Mid-Tower Case",
+                category: "Cabinet",
+                brand: "Lian Li",
+                price: 14200,
+                originalPrice: 16500,
+                rating: 4.9,
+                reviews: 140,
+                featured: true,
+                image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=600&q=80",
+                desc: "Dual-chamber chassis with tempered glass panels, versatile orientation modes, and massive radiator support.",
+                specs: { "Side Panel": "Tempered Glass", "Radiator Support": "Up to 360mm", "GPU Clearance": "422mm" }
+            },
+            {
+                id: 12,
+                name: "NZXT Kraken Elite 360 RGB AIO Liquid Cooler",
+                category: "Cooling",
+                brand: "NZXT",
+                price: 22999,
+                originalPrice: 26000,
+                rating: 4.8,
+                reviews: 95,
+                featured: false,
+                wattage: 15,
+                image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=600&q=80",
+                desc: "2.36-inch wide angle LCD display pump cap, high-static pressure fans, and CAM software control.",
+                specs: { "Radiator Size": "360mm", Display: "60Hz LCD Screen", Fans: "3x 120mm F120 RGB Core" }
+            },
+            {
+                id: 13,
+                name: "LG Ultragear 27\" 4K IPS 144Hz Gaming Monitor",
+                category: "Monitors",
+                brand: "LG",
+                price: 44999,
+                originalPrice: 52000,
+                rating: 4.7,
+                reviews: 82,
+                featured: true,
+                image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=600&q=80",
+                desc: "UHD 4K Nano IPS display with 1ms response time, G-SYNC compatible, VESA DisplayHDR 600 color depth.",
+                specs: { Resolution: "3840 x 2160 (4K)", "Refresh Rate": "144Hz", Panel: "Nano IPS", Response: "1ms GtG" }
+            },
+            {
+                id: 14,
+                name: "Logitech G Pro X Superlight 2 Wireless Mouse",
+                category: "Peripherals",
+                brand: "Logitech",
+                price: 13499,
+                originalPrice: 15999,
+                rating: 4.9,
+                reviews: 260,
+                featured: false,
+                image: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=600&q=80",
+                desc: "Featherlight 60g design, HERO 2 sensor, LIGHTFORCE hybrid switches, and 95 hours of battery life.",
+                specs: { Weight: "60g", Sensor: "HERO 2 (32,000 DPI)", Battery: "Up to 95 Hours" }
+            },
+            {
+                id: 15,
+                name: "Keychron Q1 Pro Wireless Mechanical Keyboard",
+                category: "Peripherals",
+                brand: "Keychron",
+                price: 17899,
+                originalPrice: 20000,
+                rating: 4.8,
+                reviews: 54,
+                featured: false,
+                image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80",
+                desc: "Full CNC aluminum body, double-gasket design, QMK/VIA programmable, hot-swappable tactile switches.",
+                specs: { Layout: "75% Compact", "Case Material": "Full CNC Aluminum", Connectivity: "Bluetooth 5.1 / Type-C" }
+            },
+            {
+                id: 16,
+                name: "TP-Link Archer AXE75 Tri-Band WiFi 6E Router",
+                category: "Networking",
+                brand: "TP-Link",
+                price: 14999,
+                originalPrice: 18000,
+                rating: 4.6,
+                reviews: 40,
+                featured: false,
+                image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
+                desc: "Tri-Band WiFi speeds up to 5400 Mbps, 6GHz band support, 1.7GHz quad-core CPU, and HomeShield security.",
+                specs: { Bands: "2.4GHz / 5GHz / 6GHz", Speed: "Up to 5.4 Gbps", Antennas: "6x High-Performance" }
+            }
+        ];
+
+        const CATEGORIES_LIST = [
+            { id: "CPU", name: "Processors", count: "12 Items", icon: "fa-microchip" },
+            { id: "GPU", name: "Graphics Cards", count: "18 Items", icon: "fa-hard-drive" },
+            { id: "Motherboard", name: "Motherboards", count: "14 Items", icon: "fa-memory" },
+            { id: "RAM", name: "RAM & Memory", count: "16 Items", icon: "fa-layer-group" },
+            { id: "Storage", name: "SSD & Storage", count: "22 Items", icon: "fa-database" },
+            { id: "PSU", name: "Power Supplies", count: "10 Items", icon: "fa-plug" },
+            { id: "Cabinet", name: "PC Cabinets", count: "15 Items", icon: "fa-server" },
+            { id: "Cooling", name: "Cooling Systems", count: "11 Items", icon: "fa-fan" },
+            { id: "Monitors", name: "Monitors", count: "9 Items", icon: "fa-desktop" },
+            { id: "Peripherals", name: "Keyboards & Mice", count: "25 Items", icon: "fa-keyboard" },
+            { id: "Networking", name: "Networking", count: "8 Items", icon: "fa-wifi" }
+        ];
+
+        /* Application State */
+        let state = {
+            cart: JSON.parse(localStorage.getItem('technest_cart')) || [],
+            wishlist: JSON.parse(localStorage.getItem('technest_wishlist')) || [],
+            coupon: null,
+            discountRate: 0,
+            activeCategory: 'All',
+            activeBrand: 'All',
+            maxPrice: 150000,
+            sortBy: 'popular',
+            searchQuery: '',
+            builderSelection: {
+                CPU: null,
+                Motherboard: null,
+                RAM: null,
+                GPU: null,
+                Storage: null,
+                PSU: null,
+                Cabinet: null,
+                Cooling: null
+            }
+        };
+
+        const DOM = {
+            categoryGrid: document.getElementById('categoryGrid'),
+            productsGrid: document.getElementById('productsGrid'),
+            carouselTrack: document.getElementById('carouselTrack'),
+            noProductsMessage: document.getElementById('noProductsMessage'),
+            cartCount: document.getElementById('cartCount'),
+            wishlistCount: document.getElementById('wishlistCount'),
+            cartModal: document.getElementById('cartModal'),
+            cartItemsList: document.getElementById('cartItemsList'),
+            cartSubtotal: document.getElementById('cartSubtotal'),
+            cartDiscount: document.getElementById('cartDiscount'),
+            cartShipping: document.getElementById('cartShipping'),
+            cartTotal: document.getElementById('cartTotal'),
+            couponInput: document.getElementById('couponInput'),
+            productDetailModal: document.getElementById('productDetailModal'),
+            checkoutModal: document.getElementById('checkoutModal'),
+            invoiceModal: document.getElementById('invoiceModal'),
+            wishlistModal: document.getElementById('wishlistModal'),
+            builderRowsContainer: document.getElementById('builderRowsContainer'),
+            builderTotalPrice: document.getElementById('builderTotalPrice'),
+            compatibilityBadge: document.getElementById('compatibilityBadge'),
+            estWattage: document.getElementById('estWattage'),
+            priceRange: document.getElementById('priceRange'),
+            priceValueText: document.getElementById('priceValueText'),
+            categoryFilter: document.getElementById('categoryFilter'),
+            brandFilter: document.getElementById('brandFilter'),
+            sortFilter: document.getElementById('sortFilter'),
+            globalSearchInput: document.getElementById('globalSearchInput'),
+            toastContainer: document.getElementById('toastContainer')
+        };
+
+        const formatRupee = (num) => "₹" + Number(num).toLocaleString('en-IN');
+
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `<i class="fa-solid fa-circle-info"></i> <span>${message}</span>`;
+            DOM.toastContainer.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        function renderCategories() {
+            DOM.categoryGrid.innerHTML = CATEGORIES_LIST.map(cat => `
+                <div class="category-card ${state.activeCategory === cat.id ? 'active' : ''}" onclick="selectCategoryFilter('${cat.id}')">
+                    <div class="category-icon">
+                        <i class="fa-solid ${cat.icon}"></i>
+                    </div>
+                    <h3>${cat.name}</h3>
+                    <span>${cat.count}</span>
+                </div>
+            `).join('');
+        }
+
+        function selectCategoryFilter(catId) {
+            state.activeCategory = catId;
+            DOM.categoryFilter.value = catId;
+            renderCategories();
+            renderProducts();
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function renderFeaturedCarousel() {
+            const featuredItems = PRODUCTS_DATA.filter(p => p.featured);
+            DOM.carouselTrack.innerHTML = featuredItems.map(prod => `
+                <div class="product-card" style="min-width: 270px; flex: 0 0 270px;">
+                    <div class="product-badge-wrap">
+                        <span class="badge badge-hot">${prod.badge || 'Featured'}</span>
+                    </div>
+                    <button class="wishlist-btn-corner ${state.wishlist.includes(prod.id) ? 'active' : ''}" onclick="toggleWishlist(${prod.id})">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                    <div class="product-img-box">
+                        <img src="${prod.image}" alt="${prod.name}" onerror="this.src='https://placehold.co/300x200/0f172a/ffffff?text=${encodeURIComponent(prod.name)}'">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category-text">${prod.category}</span>
+                        <h4 class="product-title">${prod.name}</h4>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i> ${prod.rating} <span>(${prod.reviews})</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="price-current">${formatRupee(prod.price)}</span>
+                            <span class="price-original">${formatRupee(prod.originalPrice)}</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart(${prod.id})"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                            <button class="btn btn-secondary btn-sm" onclick="openProductDetail(${prod.id})">Details</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        /* Carousel Navigation Controls */
+        let carouselScrollPos = 0;
+        document.getElementById('carouselNext').addEventListener('click', () => {
+            const track = DOM.carouselTrack;
+            carouselScrollPos = Math.min(carouselScrollPos + 300, track.scrollWidth - track.clientWidth);
+            track.style.transform = `translateX(-${carouselScrollPos}px)`;
+        });
+
+        document.getElementById('carouselPrev').addEventListener('click', () => {
+            const track = DOM.carouselTrack;
+            carouselScrollPos = Math.max(carouselScrollPos - 300, 0);
+            track.style.transform = `translateX(-${carouselScrollPos}px)`;
+        });
+
+        function getFilteredProducts() {
+            return PRODUCTS_DATA.filter(prod => {
+                const matchesCat = state.activeCategory === 'All' || prod.category === state.activeCategory;
+                const matchesBrand = state.activeBrand === 'All' || prod.brand === state.activeBrand;
+                const matchesPrice = prod.price <= state.maxPrice;
+                const matchesSearch = prod.name.toLowerCase().includes(state.searchQuery.toLowerCase()) || 
+                                      prod.category.toLowerCase().includes(state.searchQuery.toLowerCase()) ||
+                                      prod.brand.toLowerCase().includes(state.searchQuery.toLowerCase());
+                return matchesCat && matchesBrand && matchesPrice && matchesSearch;
+            }).sort((a, b) => {
+                if (state.sortBy === 'low-high') return a.price - b.price;
+                if (state.sortBy === 'high-low') return b.price - a.price;
+                if (state.sortBy === 'rating') return b.rating - a.rating;
+                return b.reviews - a.reviews; // Popularity default
+            });
+        }
+
+        function renderProducts() {
+            const filtered = getFilteredProducts();
+            
+            if (filtered.length === 0) {
+                DOM.productsGrid.innerHTML = '';
+                DOM.noProductsMessage.style.display = 'block';
+                return;
+            }
+
+            DOM.noProductsMessage.style.display = 'none';
+            DOM.productsGrid.innerHTML = filtered.map(prod => `
+                <div class="product-card">
+                    <div class="product-badge-wrap">
+                        ${prod.originalPrice > prod.price ? `<span class="badge badge-sale">Save ${Math.round((1 - prod.price/prod.originalPrice)*100)}%</span>` : ''}
+                    </div>
+                    <button class="wishlist-btn-corner ${state.wishlist.includes(prod.id) ? 'active' : ''}" onclick="toggleWishlist(${prod.id})">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                    <div class="product-img-box">
+                        <img src="${prod.image}" alt="${prod.name}" onerror="this.src='https://placehold.co/300x200/0f172a/ffffff?text=${encodeURIComponent(prod.name)}'">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category-text">${prod.brand} • ${prod.category}</span>
+                        <h4 class="product-title">${prod.name}</h4>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i> ${prod.rating} <span>(${prod.reviews} reviews)</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="price-current">${formatRupee(prod.price)}</span>
+                            <span class="price-original">${formatRupee(prod.originalPrice)}</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart(${prod.id})"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                            <button class="btn btn-secondary btn-sm" onclick="openProductDetail(${prod.id})"><i class="fa-solid fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function addToCart(productId, qty = 1) {
+            const existing = state.cart.find(item => item.id === productId);
+            if (existing) {
+                existing.qty += qty;
+            } else {
+                const prod = PRODUCTS_DATA.find(p => p.id === productId);
+                if (prod) {
+                    state.cart.push({ ...prod, qty });
+                }
+            }
+            saveCartState();
+            showToast('Added to Cart!');
+        }
+
+        function updateCartQty(productId, delta) {
+            const item = state.cart.find(i => i.id === productId);
+            if (item) {
+                item.qty += delta;
+                if (item.qty <= 0) {
+                    state.cart = state.cart.filter(i => i.id !== productId);
+                }
+            }
+            saveCartState();
+        }
+
+        function removeCartItem(productId) {
+            state.cart = state.cart.filter(i => i.id !== productId);
+            saveCartState();
+        }
+
+        function saveCartState() {
+            localStorage.setItem('technest_cart', JSON.stringify(state.cart));
+            updateCartBadge();
+            renderCartModal();
+        }
+
+        function updateCartBadge() {
+            const count = state.cart.reduce((sum, item) => sum + item.qty, 0);
+            DOM.cartCount.innerText = count;
+        }
+
+        function calculateCartTotals() {
+            const subtotal = state.cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+            const discount = Math.round(subtotal * state.discountRate);
+            const shipping = subtotal > 50000 || subtotal === 0 ? 0 : 499;
+            const total = Math.max(0, subtotal - discount + shipping);
+            const gst = Math.round(total * 0.18);
+            return { subtotal, discount, shipping, total, gst };
+        }
+
+        function renderCartModal() {
+            if (state.cart.length === 0) {
+                DOM.cartItemsList.innerHTML = `
+                    <div style="text-align:center; padding:3rem 1rem; color:var(--text-muted);">
+                        <i class="fa-solid fa-cart-flatbed" style="font-size:3rem; margin-bottom:1rem; display:block;"></i>
+                        <p>Your shopping cart is currently empty.</p>
+                    </div>`;
+            } else {
+                DOM.cartItemsList.innerHTML = state.cart.map(item => `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="cart-item-details">
+                            <h4>${item.name}</h4>
+                            <div class="cart-item-price">${formatRupee(item.price)}</div>
+                            <div class="cart-qty-control">
+                                <button class="cart-qty-btn" onclick="updateCartQty(${item.id}, -1)">-</button>
+                                <span class="cart-qty-val">${item.qty}</span>
+                                <button class="cart-qty-btn" onclick="updateCartQty(${item.id}, 1)">+</button>
+                            </div>
+                        </div>
+                        <button style="color:var(--danger-color);" onclick="removeCartItem(${item.id})"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                `).join('');
+            }
+
+            const totals = calculateCartTotals();
+            DOM.cartSubtotal.innerText = formatRupee(totals.subtotal);
+            DOM.cartDiscount.innerText = `-${formatRupee(totals.discount)}`;
+            DOM.cartShipping.innerText = totals.shipping === 0 ? "FREE" : formatRupee(totals.shipping);
+            DOM.cartTotal.innerText = formatRupee(totals.total);
+        }
+
+        /* Coupon handling */
+        DOM.couponInput.nextElementSibling.addEventListener('click', () => {
+            const code = DOM.couponInput.value.trim().toUpperCase();
+            if (code === 'TECH10') {
+                state.coupon = 'TECH10';
+                state.discountRate = 0.10;
+                showToast('10% Coupon Discount Applied!');
+            } else {
+                showToast('Invalid Coupon Code', 'error');
+            }
+            renderCartModal();
+        });
+
+        function toggleWishlist(productId) {
+            const idx = state.wishlist.indexOf(productId);
+            if (idx > -1) {
+                state.wishlist.splice(idx, 1);
+                showToast('Removed from Wishlist');
+            } else {
+                state.wishlist.push(productId);
+                showToast('Saved to Wishlist');
+            }
+            localStorage.setItem('technest_wishlist', JSON.stringify(state.wishlist));
+            DOM.wishlistCount.innerText = state.wishlist.length;
+            renderProducts();
+            renderFeaturedCarousel();
+            renderWishlistModal();
+        }
+
+        function renderWishlistModal() {
+            const list = DOM.wishlistModal.querySelector('#wishlistItemsList');
+            if (state.wishlist.length === 0) {
+                list.innerHTML = `<p style="text-align:center; padding:2rem; color:var(--text-muted);">No items in wishlist.</p>`;
+                return;
+            }
+            const items = PRODUCTS_DATA.filter(p => state.wishlist.includes(p.id));
+            list.innerHTML = items.map(p => `
+                <div style="display:flex; justify-content:space-between; align-items:center; padding:0.75rem 0; border-bottom:1px solid var(--border-color);">
+                    <div>
+                        <strong>${p.name}</strong>
+                        <div style="font-size:0.85rem; color:var(--accent-blue);">${formatRupee(p.price)}</div>
+                    </div>
+                    <button class="btn btn-primary btn-sm" onclick="addToCart(${p.id})">Move to Cart</button>
+                </div>
+            `).join('');
+        }
+
+        let currentDetailProductId = null;
+        let detailModalQty = 1;
+
+        function openProductDetail(productId) {
+            const prod = PRODUCTS_DATA.find(p => p.id === productId);
+            if (!prod) return;
+            currentDetailProductId = productId;
+            detailModalQty = 1;
+
+            document.getElementById('modalProductTitle').innerText = prod.name;
+            document.getElementById('modalProductName').innerText = prod.name;
+            document.getElementById('modalProductCategory').innerText = prod.category;
+            document.getElementById('modalProductBrand').innerText = `Brand: ${prod.brand}`;
+            document.getElementById('modalProductPrice').innerText = formatRupee(prod.price);
+            document.getElementById('modalProductOldPrice').innerText = formatRupee(prod.originalPrice);
+            document.getElementById('modalProductDesc').innerText = prod.desc;
+            document.getElementById('modalProductImg').src = prod.image;
+            document.getElementById('modalQtyVal').innerText = detailModalQty;
+
+            const specsTable = document.getElementById('modalSpecsTable');
+            specsTable.innerHTML = Object.entries(prod.specs || {}).map(([k, v]) => `
+                <tr><td>${k}</td><td>${v}</td></tr>
+            `).join('');
+
+            DOM.productDetailModal.classList.add('active');
+        }
+
+        document.getElementById('modalQtyPlus').addEventListener('click', () => {
+            detailModalQty++;
+            document.getElementById('modalQtyVal').innerText = detailModalQty;
+        });
+
+        document.getElementById('modalQtyMinus').addEventListener('click', () => {
+            if (detailModalQty > 1) {
+                detailModalQty--;
+                document.getElementById('modalQtyVal').innerText = detailModalQty;
+            }
+        });
+
+        document.getElementById('modalAddToCartBtn').addEventListener('click', () => {
+            if (currentDetailProductId) {
+                addToCart(currentDetailProductId, detailModalQty);
+                DOM.productDetailModal.classList.remove('active');
+            }
+        });
+
+        const BUILDER_CATEGORIES = [
+            { id: 'CPU', label: 'Processor (CPU)', icon: 'fa-microchip' },
+            { id: 'Motherboard', label: 'Motherboard', icon: 'fa-memory' },
+            { id: 'RAM', label: 'Memory (RAM)', icon: 'fa-layer-group' },
+            { id: 'GPU', label: 'Graphics Card', icon: 'fa-hard-drive' },
+            { id: 'Storage', label: 'Storage (SSD)', icon: 'fa-database' },
+            { id: 'PSU', label: 'Power Supply', icon: 'fa-plug' },
+            { id: 'Cabinet', label: 'Cabinet / Case', icon: 'fa-server' },
+            { id: 'Cooling', label: 'CPU Cooler', icon: 'fa-fan' }
+        ];
+
+        function renderPCBuilder() {
+            DOM.builderRowsContainer.innerHTML = BUILDER_CATEGORIES.map(cat => {
+                const options = PRODUCTS_DATA.filter(p => p.category === cat.id);
+                return `
+                    <div class="builder-row">
+                        <div class="builder-label">
+                            <i class="fa-solid ${cat.icon}"></i>
+                            <span>${cat.label}</span>
+                        </div>
+                        <select class="builder-select" onchange="updateBuilderSelection('${cat.id}', this.value)">
+                            <option value="">-- Choose ${cat.label} --</option>
+                            ${options.map(o => `<option value="${o.id}">${o.name} (${formatRupee(o.price)})</option>`).join('')}
+                        </select>
+                        <div class="builder-price" id="builderPrice_${cat.id}">₹0</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function updateBuilderSelection(catId, selectedValue) {
+            const prod = PRODUCTS_DATA.find(p => p.id === Number(selectedValue)) || null;
+            state.builderSelection[catId] = prod;
+
+            document.getElementById(`builderPrice_${catId}`).innerText = prod ? formatRupee(prod.price) : '₹0';
+            recalculateBuilderTotal();
+        }
+
+        function recalculateBuilderTotal() {
+            let total = 0;
+            let estWatts = 0;
+            let cpuSocket = null;
+            let moboSocket = null;
+
+            Object.entries(state.builderSelection).forEach(([cat, prod]) => {
+                if (prod) {
+                    total += prod.price;
+                    estWatts += (prod.wattage || 0);
+                    if (cat === 'CPU') cpuSocket = prod.socket;
+                    if (cat === 'Motherboard') moboSocket = prod.socket;
+                }
+            });
+
+            DOM.builderTotalPrice.innerText = formatRupee(total);
+            DOM.estWattage.innerText = `${estWatts + 100}W`; // Base load
+
+            /* Compatibility check */
+            if (cpuSocket && moboSocket && cpuSocket !== moboSocket) {
+                DOM.compatibilityBadge.className = 'compatibility-status status-warning';
+                DOM.compatibilityBadge.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> Socket Mismatch (${cpuSocket} vs ${moboSocket})`;
+            } else {
+                DOM.compatibilityBadge.className = 'compatibility-status status-ok';
+                DOM.compatibilityBadge.innerHTML = `<i class="fa-solid fa-circle-check"></i> All selected parts are compatible`;
+            }
+        }
+
+        document.getElementById('addBuildToCartBtn').addEventListener('click', () => {
+            let count = 0;
+            Object.values(state.builderSelection).forEach(prod => {
+                if (prod) {
+                    addToCart(prod.id, 1);
+                    count++;
+                }
+            });
+            if (count > 0) {
+                showToast(`Added ${count} build components to cart!`);
+            } else {
+                showToast('Please select components for your PC build', 'warning');
+            }
+        });
+
+        document.getElementById('resetBuilderBtn').addEventListener('click', () => {
+            state.builderSelection = { CPU: null, Motherboard: null, RAM: null, GPU: null, Storage: null, PSU: null, Cabinet: null, Cooling: null };
+            renderPCBuilder();
+            recalculateBuilderTotal();
+            showToast('PC Builder Reset');
+        });
+
+        document.getElementById('checkoutTriggerBtn').addEventListener('click', () => {
+            if (state.cart.length === 0) {
+                showToast('Your cart is empty', 'warning');
+                return;
+            }
+            DOM.cartModal.classList.remove('active');
+            
+            /* Fill summary in checkout modal */
+            const totals = calculateCartTotals();
+            document.getElementById('checkoutOrderItemsList').innerHTML = state.cart.map(i => `
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem;">
+                    <span>${i.qty}x ${i.name}</span>
+                    <strong>${formatRupee(i.price * i.qty)}</strong>
+                </div>
+            `).join('');
+
+            document.getElementById('coSubtotal').innerText = formatRupee(totals.subtotal);
+            document.getElementById('coDiscount').innerText = `-${formatRupee(totals.discount)}`;
+            document.getElementById('coGst').innerText = formatRupee(totals.gst);
+            document.getElementById('coShipping').innerText = totals.shipping === 0 ? 'FREE' : formatRupee(totals.shipping);
+            document.getElementById('coTotal').innerText = formatRupee(totals.total);
+
+            DOM.checkoutModal.classList.add('active');
+        });
+
+        document.getElementById('checkoutForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const totals = calculateCartTotals();
+            const invNumber = 'INV-' + Math.floor(100000 + Math.random() * 900000);
+            const invDate = new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'short', day: 'numeric' });
+
+            document.getElementById('invNumber').innerText = invNumber;
+            document.getElementById('invDate').innerText = `Date: ${invDate}`;
+            document.getElementById('invCustName').innerText = document.getElementById('custName').value;
+            document.getElementById('invCustAddress').innerText = `${document.getElementById('custAddress').value}, ${document.getElementById('custCity').value}, ${document.getElementById('custStatePin').value}`;
+            document.getElementById('invCustPhone').innerText = `+91 ${document.getElementById('custPhone').value}`;
+
+            document.getElementById('invItemsBody').innerHTML = state.cart.map(i => `
+                <tr>
+                    <td>${i.name}</td>
+                    <td>${i.qty}</td>
+                    <td>${formatRupee(i.price)}</td>
+                    <td>${formatRupee(i.price * i.qty)}</td>
+                </tr>
+            `).join('');
+
+            document.getElementById('invSubtotal').innerText = formatRupee(totals.subtotal);
+            document.getElementById('invDiscount').innerText = `-${formatRupee(totals.discount)}`;
+            document.getElementById('invGst').innerText = formatRupee(totals.gst);
+            document.getElementById('invShipping').innerText = totals.shipping === 0 ? 'FREE' : formatRupee(totals.shipping);
+            document.getElementById('invGrandTotal').innerText = formatRupee(totals.total);
+
+            DOM.checkoutModal.classList.remove('active');
+            DOM.invoiceModal.classList.add('active');
+
+            /* Clear Cart */
+            state.cart = [];
+            saveCartState();
+            showToast('Order Processed Successfully!');
+        });
+
+        function initEventListeners() {
+            /* Header Search & Global Search Input */
+            DOM.globalSearchInput.addEventListener('input', (e) => {
+                state.searchQuery = e.target.value.trim();
+                renderProducts();
+            });
+
+            /* Filters */
+            DOM.categoryFilter.addEventListener('change', (e) => {
+                state.activeCategory = e.target.value;
+                renderCategories();
+                renderProducts();
+            });
+
+            DOM.brandFilter.addEventListener('change', (e) => {
+                state.activeBrand = e.target.value;
+                renderProducts();
+            });
+
+            DOM.sortFilter.addEventListener('change', (e) => {
+                state.sortBy = e.target.value;
+                renderProducts();
+            });
+
+            DOM.priceRange.addEventListener('input', (e) => {
+                state.maxPrice = Number(e.target.value);
+                DOM.priceValueText.innerText = formatRupee(state.maxPrice);
+                renderProducts();
+            });
+
+            /* Open / Close Modals */
+            document.getElementById('openCartBtn').addEventListener('click', () => DOM.cartModal.classList.add('active'));
+            document.getElementById('cartCloseBtn').addEventListener('click', () => DOM.cartModal.classList.remove('active'));
+
+            document.getElementById('openWishlistBtn').addEventListener('click', () => {
+                renderWishlistModal();
+                DOM.wishlistModal.classList.add('active');
+            });
+            document.getElementById('wishlistCloseBtn').addEventListener('click', () => DOM.wishlistModal.classList.remove('active'));
+
+            document.getElementById('productDetailCloseBtn').addEventListener('click', () => DOM.productDetailModal.classList.remove('active'));
+            document.getElementById('checkoutCloseBtn').addEventListener('click', () => DOM.checkoutModal.classList.remove('active'));
+            document.getElementById('invoiceCloseBtn').addEventListener('click', () => DOM.invoiceModal.classList.remove('active'));
+
+            /* Mobile menu */
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileOverlay = document.getElementById('mobileOverlay');
+            document.getElementById('mobileMenuOpen').addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+                mobileOverlay.classList.add('active');
+            });
+            const closeMobile = () => {
+                mobileMenu.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+            };
+            document.getElementById('mobileMenuClose').addEventListener('click', closeMobile);
+            mobileOverlay.addEventListener('click', closeMobile);
+
+            /* Contact Form submission */
+            document.getElementById('contactForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                showToast('Thank you! Your message has been received.');
+                e.target.reset();
+            });
+
+            /* Newsletter */
+            document.getElementById('newsletterBtn').addEventListener('click', () => {
+                const email = document.getElementById('newsletterEmail').value;
+                if (email.includes('@')) {
+                    showToast('Subscribed to Hardware Newsletter!');
+                    document.getElementById('newsletterEmail').value = '';
+                } else {
+                    showToast('Please enter a valid email', 'error');
+                }
+            });
+
+            /* Countdown Timer Simulation */
+            setInterval(() => {
+                const secEl = document.getElementById('tSecs');
+                if (secEl) {
+                    let s = parseInt(secEl.innerText);
+                    if (s > 0) secEl.innerText = String(s - 1).padStart(2, '0');
+                    else secEl.innerText = '59';
+                }
+            }, 1000);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderCategories();
+            renderFeaturedCarousel();
+            renderProducts();
+            renderPCBuilder();
+            updateCartBadge();
+            renderCartModal();
+            initEventListeners();
+            DOM.wishlistCount.innerText = state.wishlist.length;
+        });
+    </script>
+</body>
+</html>
